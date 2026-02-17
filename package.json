@@ -1,0 +1,34 @@
+{
+  "name": "barebones-typescript-express",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "start": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && node dist/server.js",
+    "test": "jest"
+  },
+  "keywords": ["typescript", "nodejs", "express", "jest"],
+  "author": "",
+  "license": "ISC",
+  "description": "A barebones TypeScript Express project, with Jest for testing.",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.3",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
+    "tsconfig-paths": "^4.2.0"
+  }
+}
