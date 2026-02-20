@@ -14,6 +14,10 @@ logging.log("Initializing API");
 logging.log("----------------------------------");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use((req, _res, next) => {
+  req.body ??= {};
+  next();
+});
 
 logging.log("----------------------------------");
 logging.log("Logging & Configuration");
